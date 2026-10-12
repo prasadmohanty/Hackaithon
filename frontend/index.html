@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn4All</title>
+  <meta name="description" content="Inclusive Learning Progress & Resource Planner">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%234f46e5'/><path d='M9 22V10l7 4 7-4v12l-7 4z' fill='white'/></svg>">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#view">Skip to content</a>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M9 22V10l7 4 7-4v12l-7 4z" fill="currentColor"/></svg>
+        </div>
+        <div>
+          <div class="brand-name">Learn4All</div>
+          <div class="brand-sub">Inclusive Learning Planner</div>
+        </div>
+      </div>
+      <nav class="nav" id="nav">
+        <a href="#/dashboard" data-route="dashboard"><span class="ico">◧</span>Class dashboard</a>
+        <a href="#/students" data-route="students"><span class="ico">☺</span>Learners</a>
+        <a href="#/assessments" data-route="assessments"><span class="ico">✎</span>Assessments</a>
+        <a href="#/resources" data-route="resources"><span class="ico">▤</span>Resources</a>
+        <a href="#/subjects" data-route="subjects"><span class="ico">◈</span>Subjects &amp; topics</a>
+        <a href="#/quality" data-route="quality"><span class="ico">⚑</span>Data quality <span class="nav-badge" id="issue-badge" hidden></span></a>
+        <div class="nav-sep">Configuration</div>
+        <a href="#/rules" data-route="rules"><span class="ico">ⓘ</span>Rules explained</a>
+        <a href="#/settings" data-route="settings"><span class="ico">⚙</span>Settings</a>
+        <a href="#/api" data-route="api"><span class="ico">⌘</span>API reference</a>
+      </nav>
+      <div class="sdg">
+        <span class="sdg-chip sdg4">SDG 4</span><span class="sdg-chip sdg10">SDG 10</span>
+        <p>Quality Education · Reduced Inequalities</p>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menu-btn" aria-label="Toggle menu">☰</button>
+        <div class="topbar-title" id="page-title">Learn4All</div>
+        <div class="topbar-actions">
+          <span class="api-status" id="api-status" title="API connection"><span class="dot"></span><span class="label">Connecting…</span></span>
+          <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode" title="Toggle theme">◐</button>
+        </div>
+      </header>
+      <main id="view" class="view" tabindex="-1" aria-live="polite"></main>
+    </div>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root" role="status" aria-live="polite"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

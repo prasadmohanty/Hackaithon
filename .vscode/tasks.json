@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start API (port 8000)",
+      "type": "shell",
+      "command": "python3 server.py",
+      "options": { "cwd": "${workspaceFolder}/backend" },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Start frontend (port 5500)",
+      "type": "shell",
+      "command": "python3 -m http.server 5500 --bind 127.0.0.1",
+      "options": { "cwd": "${workspaceFolder}/frontend" },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Start API + frontend",
+      "dependsOn": ["Start API (port 8000)", "Start frontend (port 5500)"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tests",
+      "type": "shell",
+      "command": "python3 -m unittest discover -s tests -v",
+      "options": { "cwd": "${workspaceFolder}/backend" },
+      "group": { "kind": "test", "isDefault": true },
+      "problemMatcher": []
+    }
+  ]
+}
